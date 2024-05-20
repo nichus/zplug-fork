@@ -1,32 +1,32 @@
-__zplug::sources::modomomo::check()
+__zplug::sources::momodomo::check()
 
 {
     __zplug::sources::github::check "$argv[@]"
 }
 
-__zplug::sources::modomomo::install()
+__zplug::sources::momodomo::install()
 {
 
     __zplug::sources::github::install "$argv[@]"
 }
 
-__zplug::sources::modomomo::update()
+__zplug::sources::momodomo::update()
 {
     __zplug::sources::github::update "$argv[@]"
 }
 
-__zplug::sources::modomomo::get_url()
+__zplug::sources::momodomo::get_url()
 {
     local repo="$1" url_format
 
     case "$ZPLUG_PROTOCOL" in
         HTTPS | https)
-            # https://git::@modomomo.com/%s.git
-            url_format="https://git::@git.modomomo.us/${repo}.git"
+            # https://git::@momodomo.com/%s.git
+            url_format="https://git::@git.momodomo.us/${repo}.git"
             ;;
         SSH | ssh)
-            # git@modomomo.com:%s.git
-            url_format="git@git.modomomo.us:${repo}.git"
+            # git@momodomo.com:%s.git
+            url_format="git@git.momodomo.us:${repo}.git"
             ;;
     esac
 
@@ -34,19 +34,19 @@ __zplug::sources::modomomo::get_url()
     echo "$url_format"
 }
 
-__zplug::sources::modomomo::load_plugin()
+__zplug::sources::momodomo::load_plugin()
 {
 
     __zplug::sources::github::load_plugin "$argv[@]"
 }
 
-__zplug::sources::modomomo::load_command()
+__zplug::sources::momodomo::load_command()
 {
 
     __zplug::sources::github::load_command "$argv[@]"
 }
 
-__zplug::sources::modomomo::load_theme()
+__zplug::sources::momodomo::load_theme()
 {
     __zplug::sources::github::load_theme "$argv[@]"
 }
